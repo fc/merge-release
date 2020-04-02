@@ -29,12 +29,12 @@ git remote --verbose
 git show-ref # useful for debugging
 git branch --verbose
 
-if [ "$GITHUB_REPOSITORY" = "mikeal/merge-release" ]
-then
+# if [ "$GITHUB_REPOSITORY" = "mikeal/merge-release" ]
+# then
   echo "node merge-release-run.js"
   sh -c "node merge-release-run.js $*"
-else
-  echo "npx merge-release"
-  sh -c "npx merge-release $*"
-fi
+# else
+#   echo "npx merge-release"
+#   sh -c "npx merge-release $*"
+# fi
 git push "${remote_repo}" --tags
