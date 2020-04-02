@@ -57,7 +57,7 @@ const run = async () => {
   console.log('current:', current, '/', 'version:', version)
   let newVersion = execSync(`npm version --git-tag-version=false ${version}`).toString()
   console.log('new version:', newVersion)
-  exec(`npm publish`)
+  //exec(`npm publish`)
   exec(`git checkout package.json`) // cleanup
   exec(`git tag ${newVersion}`)
   /*
